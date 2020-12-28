@@ -7,16 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         [
             "JFK", "LoFi HipHop", "assets/music/LoFi_jkammellander.mp3",
-            "assets/img/lofi_cover.png"
+            "assets/img/lofi_cover.jpg"
         ],
         [
             "JFK", "Popcorn", "assets/music/popcorn.mp3", "assets/img/popcorn_cover.jpg"
         ],
         [
-            "Apashe", "Overture", "assets/music/overture.mp3", "assets/img/overture_cover.png"
+            "Apashe", "Overture", "assets/music/overture.mp3", "assets/img/overture_cover.jpg"
         ],
         [
-            "Aests ", "FIGHT!", "assets/music/fight.mp3", "assets/img/fight_cover.png"
+            "Aests ", "FIGHT!", "assets/music/fight.mp3", "assets/img/fight_cover.jpg"
         ]
     ];
 

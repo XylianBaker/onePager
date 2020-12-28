@@ -168,6 +168,7 @@ header nav ul li:hover {
 
 #about img {
     width: 240px;
+    border-radius: 50%;
 }
 
 #about img:hover {
