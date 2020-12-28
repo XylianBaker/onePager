@@ -33,7 +33,7 @@ Wird von der CubeCamera als WebGLRenderTarget verwendet.
 
 [-> cubeRenderTarget](https://threejs.org/docs/#api/en/renderers/WebGLCubeRenderTarget)
 
-## OrbitControls 🌌🎮
+### OrbitControls 🌌🎮
 Mit den Orbit-Steuerelementen kann die Kamera ein Ziel umkreisen.
 Um dies zu verwenden, muss man, wie bei allen Dateien im Verzeichnis / examples, die Datei separat in Ihren HTML-Code aufnehmen.
 
