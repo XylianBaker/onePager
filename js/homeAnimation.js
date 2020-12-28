@@ -71,4 +71,7 @@ const texture = new $.TextureLoader().load(IMGURL);
 texture.wrapS = texture.wrapT = $.MirrorRepeatWrapping;
 material.map = material.uniforms.map.value = texture;
 
-const temporaryMesh;
+// mesh 🕸 for the texture 🍁
+const temporaryMesh = new $.Mesh(geometry, material);
+temporaryMesh.scale.set(1, 20, 1);
+scene.add(temporaryMesh);
