@@ -19,6 +19,7 @@ A onepager website 📟 for school 🏫
     - [SphereBufferGeometry ⚽🐃](#spherebuffergeometry-)
   - [ShaderMaterial 🧱](#shadermaterial-)
   - [TextureLoader 🍁](#textureloader-)
+  - [MeshStandardMaterial 🕸🧱](#meshstandardmaterial-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -127,8 +128,6 @@ vec4 o = texture2D(map, uv);
 ### BufferGeometry 🐃
 Eine effiziente Darstellung der Netz-, Linien- oder Punktgeometrie. Enthält Scheitelpunktpositionen, Gesichtsindizes, Normalen, Farben, UVs und benutzerdefinierte Attribute in Puffern, wodurch die Kosten für die Übergabe all dieser Daten an die GPU reduziert werden.
 
-Informationen zum Lesen und Bearbeiten von Daten in BufferGeometry-Attributen finden Sie in der Dokumentation zu BufferAttribute.
-
 [-> BufferGeometry](https://threejs.org/docs/#api/en/core/BufferGeometry)
 
 ### SphereGeometry ⚽
@@ -175,3 +174,22 @@ const texture = new $.TextureLoader().load(IMGURL);
 ```
 
 [-> TextureLoader](https://threejs.org/docs/#api/en/loaders/TextureLoader)
+
+## MeshStandardMaterial 🕸🧱
+Ein Standardmaterial auf physikalischer Basis unter Verwendung des Metallic-Roughness-Workflows.
+
+Physikalisch basiertes Rendering (PBR) ist in letzter Zeit zum Standard in vielen 3D-Anwendungen wie Unity, Unreal und 3D Studio Max geworden.
+
+Dieser Ansatz unterscheidet sich von älteren Ansätzen darin, dass anstelle von Näherungen für die Art und Weise, wie Licht mit einer Oberfläche interagiert, ein physikalisch korrektes Modell verwendet wird. Die Idee ist, dass anstatt Materialien so zu optimieren, dass man unter bestimmten Lichtverhältnissen gut aussehen, ein Material erstellt werden kann, das unter allen Beleuchtungsszenarien „richtig“ reagiert.
+
+In der Praxis ergibt dies ein genaueres und realistischeres Ergebnis als das MeshLambertMaterial oder das MeshPhongMaterial, was etwas rechenintensiver ist.
+
+Die Schattierung wird auf die gleiche Weise wie für das MeshPhongMaterial unter Verwendung eines Phong-Schattierungsmodells berechnet. Dies berechnet die Schattierung pro Pixel (d. H. Im Fragment-Shader, AKA-Pixel-Shader), was auf Kosten einer gewissen Leistung genauere Ergebnisse liefert als das von MeshLambertMaterial verwendete Gouraud-Modell.
+
+Beachtet man, dass man für optimale Ergebnisse immer eine Umgebungskarte angeben sollten, wenn man dieses Material verwenden.
+
+```javascript
+new $.MeshStandardMaterial();
+```
+
+[-> MeshStandardMaterial](https://threejs.org/docs/#api/en/materials/MeshStandardMaterial)
