@@ -27,3 +27,14 @@ In Szenen kann man festlegen, was und wo von three.js gerendert werden soll. Hie
 Dieser Projektionsmodus soll die Art und Weise nachahmen, wie das menschliche Auge sieht. Dies ist der am häufigsten verwendete Projektionsmodus zum Rendern einer 3D-Szene.
 
 [ -> Perspective Camera](https://threejs.org/docs/#api/en/cameras/PerspectiveCamera)
+
+### cubeRenderTarget 🎯
+Wird von der CubeCamera als WebGLRenderTarget verwendet.
+
+[-> cubeRenderTarget](https://threejs.org/docs/#api/en/renderers/WebGLCubeRenderTarget)
+
+## OrbitControls 🌌🎮
+Mit den Orbit-Steuerelementen kann die Kamera ein Ziel umkreisen.
+Um dies zu verwenden, muss man, wie bei allen Dateien im Verzeichnis / examples, die Datei separat in Ihren HTML-Code aufnehmen.
+
+[-> OrbitControls](https://threejs.org/docs/#examples/en/controls/OrbitControls)
