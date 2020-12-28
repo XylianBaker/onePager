@@ -70,3 +70,5 @@ const texture = new $.TextureLoader().load(IMGURL);
 // texture 🍁 is going to be wrapped 🌯 around the material 🧱
 texture.wrapS = texture.wrapT = $.MirrorRepeatWrapping;
 material.map = material.uniforms.map.value = texture;
+
+const temporaryMesh;

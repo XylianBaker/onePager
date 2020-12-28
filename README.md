@@ -18,6 +18,7 @@ A onepager website 📟 for school 🏫
     - [SphereGeometry ⚽](#spheregeometry-)
     - [SphereBufferGeometry ⚽🐃](#spherebuffergeometry-)
   - [ShaderMaterial 🧱](#shadermaterial-)
+  - [TextureLoader 🍁](#textureloader-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -165,3 +166,12 @@ const material = new $.ShaderMaterial();
 ```
 
 [-> ShaderMaterial](https://threejs.org/docs/#api/en/materials/ShaderMaterial)
+
+## TextureLoader 🍁
+Klasse zum Laden einer Textur. Dies verwendet den ImageLoader intern zum Laden von Dateien.
+
+```javascript
+const texture = new $.TextureLoader().load(IMGURL);
+```
+
+[-> TextureLoader](https://threejs.org/docs/#api/en/loaders/TextureLoader)
