@@ -9,7 +9,7 @@ import { OrbitControls } from '//unpkg.com/three@0.123.0/examples/jsm/controls/O
 const renderer = new $.WebGLRenderer({ antialias: true });
 const scene = new $.Scene();
 const camera = new $.PerspectiveCamera(75, 2, .1, 1000);
-const cubeRenderTarget = new $.cubeRenderTarget(128);
+const cubeRenderTarget = new $.WebGLCubeRenderTarget(128);
 const cubeCamera = new $.CubeCamera(.1, 1000, cubeRenderTarget);
 const controls = new OrbitControls(camera, renderer.domElement);
 
@@ -23,7 +23,7 @@ window.addEventListener('resize', () => {
 
     // camera 🎥
     camera.aspect = clientWidth / clientHeight;
-    camera.updateProjectMatrix();
+    camera.updateProjectionMatrix();
 });
 
 // add canvas 🧵 to index.html 📟
@@ -38,7 +38,7 @@ window.dispatchEvent(new Event('resize'));
 const IMGURL = 'https://images.unsplash.com/photo-1603924147107-81e7a2b3051e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80';
 const IMGURL2 = 'https://images.unsplash.com/photo-1608702885483-c9dd2030329a?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2NXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60';
 
-$.shaderChunk.my_map_fragment = `
+$.ShaderChunk.my_map_fragment = `
 #ifdef USE_MAP
     float t = t * 0.0001;
     vec2 uv = vUv * vec2(2.0, 10.0) + vec2(0.5, 0.5);
@@ -73,7 +73,7 @@ const material = new $.ShaderMaterial({
 const texture = new $.TextureLoader().load(IMGURL);
 
 // texture 🍁 is going to be wrapped 🌯 around the material 🧱
-texture.wrapS = texture.wrapT = $.MirrorRepeatWrapping;
+texture.wrapS = texture.wrapT = $.MirroredRepeatWrapping;
 material.map = material.uniforms.map.value = texture;
 
 // mesh 🕸 for the texture 🍁
@@ -91,7 +91,7 @@ const mesh = new $.Mesh(
         emissiveIntensity: 0.12,
         metalness: 1,
         roughness: 0,
-        envMap: cubeRT.texture,
+        envMap: cubeRenderTarget.texture,
         envMapIntensity: 1,
         // second image 🖼
         map: new $.TextureLoader().load(IMGURL2)
