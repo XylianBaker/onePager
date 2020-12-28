@@ -121,10 +121,20 @@ header nav ul li:hover {
 
 /* Home ***************************/
 
+#home {
+    width: 100%;
+    text-align: center;
+}
+
 #home canvas {
     width: 100%;
     height: 100vh;
-    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 #home h1 {
