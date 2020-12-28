@@ -12,3 +12,18 @@ WebGL wird in Javascript und der shader code wird in OpenGL ES Shading Language 
 
 ### three.js ➗
 Three.js ist eine browserübergreifende JavaScript-Bibliothek und eine Anwendungsprogrammierschnittstelle, mit der mithilfe von WebGL animierte 3D-Computergrafiken in einem Webbrowser erstellt und angezeigt werden.
+
+### WebGL renderer 🎞
+Der WebGL-Renderer zeigt Szenen mit WebGL an.
+
+[ -> WebGLRenderer](https://threejs.org/docs/#api/en/renderers/WebGLRenderer)
+
+### Scene 🎭
+In Szenen kann man festlegen, was und wo von three.js gerendert werden soll. Hier platziert man Objekte, Lichter und Kameras.
+
+[ -> Scene](https://threejs.org/docs/#api/en/scenes/Scene)
+
+### Perspective Camera 🎥
+Dieser Projektionsmodus soll die Art und Weise nachahmen, wie das menschliche Auge sieht. Dies ist der am häufigsten verwendete Projektionsmodus zum Rendern einer 3D-Szene.
+
+[ -> Perspective Camera](https://threejs.org/docs/#api/en/cameras/PerspectiveCamera)
