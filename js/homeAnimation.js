@@ -75,3 +75,21 @@ material.map = material.uniforms.map.value = texture;
 const temporaryMesh = new $.Mesh(geometry, material);
 temporaryMesh.scale.set(1, 20, 1);
 scene.add(temporaryMesh);
+
+// Mesh 🕸
+const mesh = new $.Mesh(
+    // Geometry 📐
+    new $.SphereBufferGeometry(1, 32, 64),
+    // StandardMaterial 🧱 for the Mesh 🕸
+    new $.MeshStandardMaterial({
+        emissive: 'white',
+        emissiveIntensity: 0.12,
+        metalness: 1,
+        roughness: 0,
+        envMap: cubeRT.texture,
+        envMapIntensity: 1,
+        // second image 🖼
+        map: new $.TextureLoader().load(IMGURL2)
+    })
+);
+scene.add(mesh);
