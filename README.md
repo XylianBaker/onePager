@@ -8,6 +8,7 @@ A onepager website 📟 for school 🏫
     - [Scene 🎭](#scene-)
     - [Perspective Camera 🎥](#perspective-camera-)
     - [cubeRenderTarget 🎯](#cuberendertarget-)
+    - [cubeCamera🎲🎥](#cubecamera)
     - [OrbitControls 🌌🎮](#orbitcontrols-)
   - [Vectors 📉](#vectors-)
     - [Vector2 🥈](#vector2-)
@@ -70,6 +71,15 @@ const cubeRenderTarget = new $.cubeRenderTarget(128);
 ```
 
 [-> cubeRenderTarget](https://threejs.org/docs/#api/en/renderers/WebGLCubeRenderTarget)
+
+### cubeCamera🎲🎥
+Erstellt 6 Kameras, die in ein WebGLCubeRenderTarget gerendert werden.
+
+```javascript
+const cubeCamera = new $.CubeCamera(.1, 1000, cubeRenderTarget);
+```
+
+[-> cubeCamera🎲🎥](https://translate.google.at/?sl=en&tl=de&text=Creates%206%20cameras%20that%20render%20to%20a%20WebGLCubeRenderTarget.&op=translate)
 
 ### OrbitControls 🌌🎮
 Mit den Orbit-Steuerelementen kann die Kamera ein Ziel umkreisen.
