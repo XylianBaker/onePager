@@ -160,4 +160,8 @@ Bei der Verwendung eines ShaderMaterials sind folgende Hinweise zu beachten:
     - Die Schleifenvariable muss i sein.
     - Der Wert UNROLLED_LOOP_INDEX wird für die angegebene Iteration durch den Explizitätswert i ersetzt und kann in Präprozessoranweisungen verwendet werden.
 
+```javascript
+const material = new $.ShaderMaterial();
+```
+
 [-> ShaderMaterial](https://threejs.org/docs/#api/en/materials/ShaderMaterial)
