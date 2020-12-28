@@ -49,4 +49,17 @@ $.shaderChunk.my_map_fragment = `
     C = mapTexelToLinear(C);
     diffuseColor *= C;
 #endif
-`
+`;
+
+// camera 🎥 & controls 🎮
+controls.target.set(-1, 4, 0);
+camera.position.set(-1, -4, 1);
+
+// geometry 📐 & material 🧱
+const geometry = new $.SphereBufferGeometry(4, 32, 32);
+const material = new $.ShaderMaterial({
+    uniforms: $.UniformsUtils.merge([$.ShaderLib.basic.uniforms, { t: { value: 0 } }]),
+    vertexShader: $.ShaderLib.basic.vertexShader,
+    fragmentShader: `uniform float t;\n` + $.ShaderLib.basic.fragmentShader.replace('<map_fragment>', '<my_map_fragment>'),
+    side: $.BackSide
+});
