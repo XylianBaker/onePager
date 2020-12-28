@@ -72,12 +72,6 @@ img,
     display: none;
 }
 
-canvas {
-    width: 100%;
-    height: 100vh;
-    display: block;
-}
-
 
 /* Header ***************************/
 
@@ -127,11 +121,10 @@ header nav ul li:hover {
 
 /* Home ***************************/
 
-#home {
-    background: url("../imgLayout/landing01.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
+#home canvas {
+    width: 100%;
+    height: 100vh;
+    display: block;
 }
 
 #home h1 {
