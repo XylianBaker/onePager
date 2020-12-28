@@ -114,3 +114,11 @@ renderer.setAnimationLoop((t) => {
     controls.update();
     material.uniforms.t.value = t;
 });
+
+// GreenSock 🧦 Animation 🏃‍♂️ Platform 💻
+gsap.to(mesh.rotation, {
+    x: -Math.PI * 2,
+    duration: 10,
+    repeat: -1,
+    ease: 'none'
+});
