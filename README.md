@@ -21,6 +21,7 @@ A onepager website 📟 for school 🏫
   - [ShaderMaterial 🧱](#shadermaterial-)
   - [TextureLoader 🍁](#textureloader-)
   - [MeshStandardMaterial 🕸🧱](#meshstandardmaterial-)
+  - [GSAP (GreenSock 🧦 Animation 🏃‍♂️ Platform 💻)](#gsap-greensock--animation-️-platform-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -203,3 +204,27 @@ new $.MeshStandardMaterial();
 ```
 
 [-> MeshStandardMaterial](https://threejs.org/docs/#api/en/materials/MeshStandardMaterial)
+
+## GSAP (GreenSock 🧦 Animation 🏃‍♂️ Platform 💻)
+GSAP ist eine JavaScript-Bibliothek zum Erstellen von Hochleistungsanimationen, die in allen gängigen Browsern funktionieren. 
+
+Man kann CSS, SVG, Canvas, React, Vue, WebGL, Farben, Zeichenfolgen, Bewegungspfade, generische Objekte und vieles mehr animieren, alles, was JavaScript berühren kann.
+
+Keine andere Bibliothek bietet eine derart fortschrittliche Sequenzierung, Zuverlässigkeit und strenge Kontrolle bei gleichzeitiger Lösung realer Probleme auf Millionen von Websites. 
+
+GSAP umgeht unzählige Browser-Inkonsistenzen. 
+
+Ihre Animationen funktionieren einfach. 
+
+Im Kern ist GSAP ein Hochgeschwindigkeits-Eigenschaftsmanipulator, der Werte im Laufe der Zeit mit äußerster Genauigkeit aktualisiert. Es ist bis zu 20x schneller als jQuery.
+
+```javascript
+gsap.to(mesh.rotation, {
+    x: -Math.PI * 2,
+    duration: 10,
+    repeat: -1,
+    ease: 'none'
+});
+```
+
+[-> GSAP](https://greensock.com/gsap/)
