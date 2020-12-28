@@ -24,7 +24,11 @@ window.addEventListener('resize', () => {
     // camera 🎥
     camera.aspect = clientWidth / clientHeight;
     camera.updateProjectMatrix();
-})
+});
+
+// add canvas 🧵 to index.html 📟
+document.body.querySelector('#home').append(renderer.domElement);
+window.dispatchEvent(new Event('resize'));
 
 // --------
 // main 🏂
