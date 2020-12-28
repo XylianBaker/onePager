@@ -222,6 +222,14 @@ header nav ul li:hover {
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
+#musicBody {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(119, 173, 157, 1) 27%, rgba(218, 249, 234, 1) 75%);
+}
+
 #card {
     display: flex;
     justify-content: center;
