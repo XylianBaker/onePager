@@ -63,3 +63,10 @@ const material = new $.ShaderMaterial({
     fragmentShader: `uniform float t;\n` + $.ShaderLib.basic.fragmentShader.replace('<map_fragment>', '<my_map_fragment>'),
     side: $.BackSide
 });
+
+// texture 🍁 loaded from the image 🖼
+const texture = new $.TextureLoader().load(IMGURL);
+
+// texture 🍁 is going to be wrapped 🌯 around the material 🧱
+texture.wrapS = texture.wrapT = $.MirrorRepeatWrapping;
+material.map = material.uniforms.map.value = texture;
