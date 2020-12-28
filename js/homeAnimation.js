@@ -10,6 +10,7 @@ const renderer = new $.WebGLRenderer({ antialias: true });
 const scene = new $.Scene();
 const camera = new $.PerspectiveCamera(75, 2, .1, 1000);
 const cubeRenderTarget = new $.cubeRenderTarget(128);
+const cubeCamera = new $.CubeCamera(.1, 1000, cubeRenderTarget);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 window.addEventListener('resize', () => {
@@ -92,4 +93,24 @@ const mesh = new $.Mesh(
         map: new $.TextureLoader().load(IMGURL2)
     })
 );
+
+// adding Mesh🕸 to the scene 🎭
 scene.add(mesh);
+
+// Render⚡ & Animation 🏃‍♂️
+renderer.setAnimationLoop((t) => {
+    // 🙈
+    mesh.visible = false;
+
+    // 🎲🎥
+    cubeCamera.position.copy(mesh.position);
+    cubeCamera.update(renderer, scene);
+
+    // 🐵
+    mesh.visible = true;
+
+    // ⚡🎮
+    renderer.render(scene, camera);
+    controls.update();
+    material.uniforms.t.value = t;
+});
