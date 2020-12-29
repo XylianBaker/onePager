@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "JFK", "Popcorn", "assets/music/popcorn.mp3", "assets/img/popcorn_cover.jpg"
         ],
         [
-            "Apashe", "Overture", "assets/music/overture.mp3", "assets/img/overture_cover.jpg"
+            "Splice", "French House", "assets/music/french_house_splice.mp3", "assets/img/overture_cover.jpg"
         ],
         [
             "Aests ", "FIGHT!", "assets/music/fight.mp3", "assets/img/fight_cover.jpg"
