@@ -310,6 +310,20 @@ header nav ul li:hover {
     cursor: pointer;
 }
 
+#card #title {
+    font-size: 3em;
+}
+
+@media (max-width: 510px) {
+    #card #audio {
+        margin: auto;
+    }
+    #card #image {
+        height: auto;
+        width: 100%;
+    }
+}
+
 
 /* Conact ***************************/
 
