@@ -325,7 +325,7 @@ header nav ul li:hover {
 }
 
 
-/* Conact ***************************/
+/* Contact ***************************/
 
 form input,
 textarea {
@@ -487,7 +487,7 @@ footer p {
         padding: 0;
         width: 100%;
     }
-    haeder nav ul {
+    header nav ul {
         height: auto;
     }
     header nav ul li {
