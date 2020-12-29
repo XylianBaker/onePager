@@ -249,6 +249,7 @@ header nav ul li:hover {
 }
 
 #card {
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: stretch;
